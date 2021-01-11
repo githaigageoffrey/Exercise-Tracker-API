@@ -14,6 +14,10 @@ connection.once('open',()=>{
 app.use(config.cors());
 app.use(config.express.json());
 
+
+app.use('/exercises',config.usersRouter);
+app.use('/users',config.usersRouter);
+
 app.listen(port, ()=>{
     console.log("Listening to port: "+port);
 });

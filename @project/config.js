@@ -5,8 +5,13 @@ var Schema = mongoose.Schema;
 
 require('dotenv').config();
 
+const exercisesRouter = require('./routes/exercises.js');
+const usersRouter = require('./routes/users.js');
+
 module.exports = {
     express,
     cors,
-    mongoose
+    mongoose,
+    exercisesRouter,
+    usersRouter
 }
