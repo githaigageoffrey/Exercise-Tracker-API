@@ -1,8 +1,8 @@
-const config = require('../config.js');
+//const config = require('../config.js');
+const mongo = require('mongoose');
+//const Schema = mongo.Schema;
 
-const Schema = config.schema;
-
-var UsersSchema =  new Schema(
+var UsersSchema = mongo.Schema(
 	{
 		username: { 
             type : String,
@@ -17,5 +17,5 @@ var UsersSchema =  new Schema(
 	}
 );
 
-var USERS = config.mongo.model('Users',UsersSchema,);
+var USERS = mongo.model('Users',UsersSchema,);
 module.exports = USERS;

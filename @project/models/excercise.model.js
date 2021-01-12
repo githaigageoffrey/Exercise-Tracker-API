@@ -1,7 +1,6 @@
-const config = require('../config.js');
-const Schema = config.Schema;
+const mongo = require('mongoose');
 
-var ExerciseSchema = new Schema(
+var ExerciseSchema = mongo.Schema(
 	{
         username: { type : String,required: true},
         description: { type : String,required: true},
@@ -13,5 +12,5 @@ var ExerciseSchema = new Schema(
 	}
 );
 
-var EXERCISE = config.mongoose.model('Exercise',ExerciseSchema);
+var EXERCISE = mongo.model('Exercise',ExerciseSchema);
 module.exports = EXERCISE;
