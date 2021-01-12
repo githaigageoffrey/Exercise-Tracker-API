@@ -17,5 +17,5 @@ var UsersSchema = mongo.Schema(
 	}
 );
 
-var USERS = mongo.model('Users',UsersSchema,);
+var USERS = mongo.model('Exercises',UsersSchema,);
 module.exports = USERS;
