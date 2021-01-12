@@ -1,7 +1,8 @@
 const config = require('../config.js');
-const Schema = config.Schema;
 
-var UsersSchema =  Schema(
+const Schema = config.schema;
+
+var UsersSchema =  new Schema(
 	{
 		username: { 
             type : String,
