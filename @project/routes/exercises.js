@@ -2,7 +2,9 @@ const router = require('express').Router();
 let Exercises = require('../models/excercise.model');
 
 router.route('/').get((req,res) => {
-    Exercises.find().then(exercises => res.json(exercises)).catch(err => res.status(400).json("Error : "+err));
+    Exercises.find()
+    .then(exercises => res.json(exercises))
+    .catch(err => res.status(400).json("Error : "+err));
 });
 
 router.route('/add').post((req,res) => {
@@ -13,7 +15,9 @@ router.route('/add').post((req,res) => {
 
     const newExercise = new Exercises({username,description,duration,date});
 
-    newExercise.save.then(()=> res.json('Exercise saved successfully')).catch(err => res.status(400).json('Error : '+err));
+    newExercise.save()
+    .then(()=> res.json('Exercise saved successfully'))
+    .catch(err => res.status(400).json('Error : '+err));
 });
 
 module.exports = router;
