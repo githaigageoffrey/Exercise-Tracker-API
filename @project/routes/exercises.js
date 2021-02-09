@@ -12,9 +12,9 @@ router.route('/add').post((req,res) => {
     const description = req.body.description;
     const duration = Number(req.body.duration);
     const date = Date.parse(req.body.date);
-
+	
     const newExercise = new Exercises({username,description,duration,date});
-
+	console.log(req.body);
     newExercise.save()
     .then(()=> res.json('Exercise saved successfully'))
     .catch(err => res.status(400).json('Error : '+err));
