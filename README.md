@@ -1,9 +1,7 @@
 # Exercise-Tracker-API
 
-A simple flutter program to show different flutter features eg UI design and implementation of Navigation
+NodeJs Study program. Expense tracker
 
-The program is an Expense tracker
+run the program
 
-To run the program 
-
-`flutter run`
+`node app`
